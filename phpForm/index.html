@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <h2>Contact Form</h2>
+    
+    <form action="contactform.php" method="POST">
+        <label>First name:</label> 
+        <input type="text" name="firstname" placeholder="Enter firstname"> <br><br>
+        
+        <label>Last name:</label> 
+        <input type="text" name = "lastname"placeholder="Enter Your last-Name" /><br><br>
+        <label>Email:</label>
+        <input type="email" name = "email" placeholder="Enter Your Email" /><br><br>
+        <label>Phone:</label>
+        <input type="phone number" name = "phone" placeholder="Enter Phone-number"><br><br>
+    <label for="gender"> Gender:</label>
+    <input type="radio" name="gender"> Male
+    <input type="radio" name="gender"> Female
+        <input type="hidden" name="form_submitted" value="1" /><br><br>
+        <textarea placeholder="about yourself" cols="30" rows ="7"></textarea><br><br>
+    <input type="checkbox" name="terms" required> By checking this box, you agree to our terms and conditions<br><br>
+        <input type="submit" value="Submit">
+    
+    </form>
+</body>
+</html>
