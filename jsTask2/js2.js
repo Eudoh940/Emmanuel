@@ -16,24 +16,21 @@ let data = [
         time: 3
     }
 ]
-for (i of data){
-    console.log(i)
-}
-let data = [{principal, time}]
-function interestCalculator(data){
-    let rate = [data.principal, data.time]
-    if (data.principal >= 2500 && data.time > 1 && data.time< 3){
+
+function interestCalculator(item){
+    let rate = [item.principal, item.time].join({})
+    if (item.principal >= 2500 && item.time > 1 && item.time< 3){
         rate = 3;
-    }else if(data.principal >= 2500 && data.time >= 3) {
+    }else if(item.principal >= 2500 && item.time >= 3) {
         rate = 4;
-    }else if(data.principal < 2500 || data.time <= 1){
+    }else if(item.principal < 2500 || item.time <= 1){
         rate = 2;
     }else{
         rate = 1;
-    }  
+    } 
+    let interest = (item.principal * rate * item.time) / 100
+    return interest 
 }
-let interest = (data.principal * rate * data.time) / 100
-function interestData(interest) {
-    data.map(rate)
+function interestData() {
+    console.log(data.map(interest)
 } 
-console.log (interestCalculator())
